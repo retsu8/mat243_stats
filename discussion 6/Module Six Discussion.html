@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Project Two Jupyter Script</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Module Six Discussion</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11775,55 +11775,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Project-Two:-Hypothesis-Testing">Project Two: Hypothesis Testing<a class="anchor-link" href="#Project-Two:-Hypothesis-Testing">&#182;</a></h1><p>This notebook contains the step-by-step directions for Project Two. It is very important to run through the steps in order. Some steps depend on the outputs of earlier steps. Once you have completed the steps in this notebook, be sure to write your summary report.</p>
-<p>You are a data analyst for a basketball team and have access to a large set of historical data that you can use to analyze performance patterns. The coach of the team and your management have requested that you perform several hypothesis tests to statistically validate claims about your team's performance. This analysis will provide evidence for these claims and help make key decisions to improve the performance of the team. You will use the Python programming language to perform the statistical analyses and then prepare a report of your findings for the team’s management. Since the managers are not data analysts, you will need to interpret your findings and describe their practical implications.</p>
-<p>There are four important variables in the data set that you will study in Project Two.</p>
-<table>
-<thead><tr>
-<th><div style="text-align: left"> Variable </div></th>
-<th><div style="text-align: left"> What does it represent? </div></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><div style="text-align: left"> pts </div></td>
-<td><div style="text-align: left"> Points scored by the team in a game </div></td>
-</tr>
-<tr>
-<td><div style="text-align: left"> elo_n </div></td>
-<td><div style="text-align: left"> A measure of relative skill level of the team in the league </div></td>
-</tr>
-<tr>
-<td><div style="text-align: left"> year_id </div></td>
-<td><div style="text-align: left"> Year when the team played the games </div></td>
-</tr>
-<tr>
-<td><div style="text-align: left"> fran_id </div></td>
-<td><div style="text-align: left"> Name of the NBA team </div></td>
-</tr>
-</tbody>
-</table>
-<p>The ELO rating, represented by the variable <strong>elo_n</strong>, is used as a measure of the relative skill of a team. This measure is inferred based on the final score of a game, the game location, and the outcome of the game relative to the probability of that outcome. The higher the number, the higher the relative skill of a team.</p>
-<p>In addition to studying data on your own team, your management has also assigned you a second team so that you can compare its performance with your own team's.</p>
-<table>
-<thead><tr>
-<th><div style="text-align: left"> Team </div></th>
-<th><div style="text-align: left"> What does it represent </div></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><div style="text-align: left"> Your Team </div></td>
-<td><div style="text-align: left"> This is the team that has hired you as an analyst. This is the team that you will pick below. See Step 2.</div></td>
-</tr>
-<tr>
-<td><div style="text-align: left"> Assigned Team </div></td>
-<td><div style="text-align: left"> This is the team that the management has assigned to you to compare against your team. See Step 1. </div></td>
-</tr>
-</tbody>
-</table>
-<p>Reminder: It may be beneficial to review the summary report template for Project Two prior to starting this Python script. That will give you an idea of the questions you will need to answer with the outputs of this script.</p>
-<hr>
+<h1 id="Module-Six-Discussion:-Multiple-Regression">Module Six Discussion: Multiple Regression<a class="anchor-link" href="#Module-Six-Discussion:-Multiple-Regression">&#182;</a></h1><p>This notebook contains the step-by-step directions for your Module Six discussion. It is very important to run through the steps in order. Some steps depend on the outputs of earlier steps. Once you have completed the steps in this notebook, be sure to answer the questions about this activity in the discussion for this module.</p>
+<p>Reminder: If you have not already reviewed the discussion prompt, please do so before beginning this activity. That will give you an idea of the questions you will need to answer with the outputs of this script.</p>
 
 </div>
 </div>
@@ -11832,10 +11785,16 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Step-1:-Data-Preparation-&amp;-the-Assigned-Team">Step 1: Data Preparation &amp; the Assigned Team<a class="anchor-link" href="#Step-1:-Data-Preparation-&amp;-the-Assigned-Team">&#182;</a></h2><p>This step uploads the data set from a CSV file. It also selects the Assigned Team for this analysis. Do not make any changes to the code block below.</p>
-<ol>
-<li>The <strong>Assigned Team</strong> is <font color='blue'><strong>Chicago Bulls</strong></font> from the years <font color='blue'><strong>1996 - 1998</strong></font></li>
-</ol>
+<h2 id="Initial-post-(due-Thursday)">Initial post (due Thursday)<a class="anchor-link" href="#Initial-post-(due-Thursday)">&#182;</a></h2><hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Step-1:-Generating-cars-dataset">Step 1: Generating cars dataset<a class="anchor-link" href="#Step-1:-Generating-cars-dataset">&#182;</a></h3><p>This block of Python code will generate the sample data for you. You will not be generating the data set using numpy module this week. Instead, the data set will be imported from a CSV file. To make the data unique to you, a random sample of size 30, without replacement, will be drawn from the data in the CSV file. The data set will be saved in a Python dataframe that will be used in later calculations.</p>
 <p>Click the block of code below and hit the <strong>Run</strong> button above.</p>
 
 </div>
@@ -11846,26 +11805,18 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">st</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
 
-<span class="n">nba_orig_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;nbaallelo.csv&#39;</span><span class="p">)</span>
-<span class="n">nba_orig_df</span> <span class="o">=</span> <span class="n">nba_orig_df</span><span class="p">[(</span><span class="n">nba_orig_df</span><span class="p">[</span><span class="s1">&#39;lg_id&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;NBA&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">nba_orig_df</span><span class="p">[</span><span class="s1">&#39;is_playoffs&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)]</span>
-<span class="n">columns_to_keep</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;game_id&#39;</span><span class="p">,</span><span class="s1">&#39;year_id&#39;</span><span class="p">,</span><span class="s1">&#39;fran_id&#39;</span><span class="p">,</span><span class="s1">&#39;pts&#39;</span><span class="p">,</span><span class="s1">&#39;opp_pts&#39;</span><span class="p">,</span><span class="s1">&#39;elo_n&#39;</span><span class="p">,</span><span class="s1">&#39;opp_elo_n&#39;</span><span class="p">,</span> <span class="s1">&#39;game_location&#39;</span><span class="p">,</span> <span class="s1">&#39;game_result&#39;</span><span class="p">]</span>
-<span class="n">nba_orig_df</span> <span class="o">=</span> <span class="n">nba_orig_df</span><span class="p">[</span><span class="n">columns_to_keep</span><span class="p">]</span>
+<span class="c1"># read data from mtcars.csv data set.</span>
+<span class="n">cars_df_orig</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://s3-us-west-2.amazonaws.com/data-analytics.zybooks.com/mtcars.csv&quot;</span><span class="p">)</span>
 
-<span class="c1"># The dataframe for the assigned team is called assigned_team_df. </span>
-<span class="c1"># The assigned team is the Bulls from 1996-1998.</span>
-<span class="n">assigned_years_league_df</span> <span class="o">=</span> <span class="n">nba_orig_df</span><span class="p">[(</span><span class="n">nba_orig_df</span><span class="p">[</span><span class="s1">&#39;year_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="mi">1996</span><span class="p">,</span> <span class="mi">1998</span><span class="p">))]</span>
-<span class="n">assigned_team_df</span> <span class="o">=</span> <span class="n">assigned_years_league_df</span><span class="p">[(</span><span class="n">assigned_years_league_df</span><span class="p">[</span><span class="s1">&#39;fran_id&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;Bulls&#39;</span><span class="p">)]</span>
-<span class="n">assigned_team_df</span> <span class="o">=</span> <span class="n">assigned_team_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># randomly pick 30 observations from the data set to make the data set unique to you.</span>
+<span class="n">cars_df</span> <span class="o">=</span> <span class="n">cars_df_orig</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
-<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">assigned_team_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">to_html</span><span class="p">()))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;printed only the first five observations...&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of rows in the dataset =&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">assigned_team_df</span><span class="p">))</span>
+<span class="c1"># print only the first five observations in the dataset.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cars data frame (showing only the first five observations)</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">cars_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">to_html</span><span class="p">()))</span>
 </pre></div>
 
 </div>
@@ -11881,146 +11832,12 @@ div#notebook {
 <div class="prompt"></div>
 
 
-
-<div class="output_html rendered_html output_subarea ">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>game_id</th>
-      <th>year_id</th>
-      <th>fran_id</th>
-      <th>pts</th>
-      <th>opp_pts</th>
-      <th>elo_n</th>
-      <th>opp_elo_n</th>
-      <th>game_location</th>
-      <th>game_result</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>199511030CHI</td>
-      <td>1996</td>
-      <td>Bulls</td>
-      <td>105</td>
-      <td>91</td>
-      <td>1598.2924</td>
-      <td>1531.7449</td>
-      <td>H</td>
-      <td>W</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>199511040CHI</td>
-      <td>1996</td>
-      <td>Bulls</td>
-      <td>107</td>
-      <td>85</td>
-      <td>1604.3940</td>
-      <td>1458.6415</td>
-      <td>H</td>
-      <td>W</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>199511070CHI</td>
-      <td>1996</td>
-      <td>Bulls</td>
-      <td>117</td>
-      <td>108</td>
-      <td>1605.7983</td>
-      <td>1310.9349</td>
-      <td>H</td>
-      <td>W</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>199511090CLE</td>
-      <td>1996</td>
-      <td>Bulls</td>
-      <td>106</td>
-      <td>88</td>
-      <td>1618.8701</td>
-      <td>1452.8268</td>
-      <td>A</td>
-      <td>W</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>199511110CHI</td>
-      <td>1996</td>
-      <td>Bulls</td>
-      <td>110</td>
-      <td>106</td>
-      <td>1621.1591</td>
-      <td>1490.2861</td>
-      <td>H</td>
-      <td>W</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-</div>
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>printed only the first five observations...
-Number of rows in the dataset = 246
+<pre>Cars data frame (showing only the first five observations)
+
 </pre>
 </div>
 </div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Step-2:-Pick-Your-Team">Step 2: Pick Your Team<a class="anchor-link" href="#Step-2:-Pick-Your-Team">&#182;</a></h2><p>In this step, you will pick your team. The range of years that you will study for your team is <font color='blue'><strong>2013-2015</strong></font>. Make the following edits to the code block below:</p>
-<ol>
-<li><font color='red'> Replace <strong>??TEAM??</strong> with your choice of team from one of the following team names. </font><br>
-<font color='blue'>*Bucks, Bulls, Cavaliers, Celtics, Clippers, Grizzlies, Hawks, Heat, Jazz, Kings, Knicks, Lakers, Magic, Mavericks, Nets, Nuggets, Pacers, Pelicans, Pistons, Raptors, Rockets, Sixers, Spurs, Suns, Thunder, Timberwolves, Trailblazers, Warriors, Wizards*</font><br>
-Remember to enter the team name within single quotes. For example, if you picked the Suns, then ??TEAM?? should be replaced with 'Suns'.  </li>
-</ol>
-<p>After you are done with your edits, click the block of code below and hit the <strong>Run</strong> button above.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Range of years: 2013-2015 (Note: The line below selects all teams within the three-year period 2013-2015. This is not your team&#39;s dataframe.</span>
-<span class="n">your_years_leagues_df</span> <span class="o">=</span> <span class="n">nba_orig_df</span><span class="p">[(</span><span class="n">nba_orig_df</span><span class="p">[</span><span class="s1">&#39;year_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="mi">2013</span><span class="p">,</span> <span class="mi">2015</span><span class="p">))]</span>
-
-<span class="c1"># The dataframe for your team is called your_team_df.</span>
-<span class="c1"># ---- TODO: make your edits here ----</span>
-<span class="n">your_team_df</span> <span class="o">=</span> <span class="n">your_years_leagues_df</span><span class="p">[(</span><span class="n">your_years_leagues_df</span><span class="p">[</span><span class="s1">&#39;fran_id&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;Wizards&#39;</span><span class="p">)]</span>
-<span class="n">your_team_df</span> <span class="o">=</span> <span class="n">your_team_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">your_team_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">to_html</span><span class="p">()))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;printed only the first five observations...&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of rows in the dataset =&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">your_team_df</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
 
 <div class="output_area">
 
@@ -12033,94 +11850,100 @@ Remember to enter the team name within single quotes. For example, if you picked
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>game_id</th>
-      <th>year_id</th>
-      <th>fran_id</th>
-      <th>pts</th>
-      <th>opp_pts</th>
-      <th>elo_n</th>
-      <th>opp_elo_n</th>
-      <th>game_location</th>
-      <th>game_result</th>
+      <th>Unnamed: 0</th>
+      <th>mpg</th>
+      <th>cyl</th>
+      <th>disp</th>
+      <th>hp</th>
+      <th>drat</th>
+      <th>wt</th>
+      <th>qsec</th>
+      <th>vs</th>
+      <th>am</th>
+      <th>gear</th>
+      <th>carb</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>201210300CLE</td>
-      <td>2013</td>
-      <td>Wizards</td>
-      <td>84</td>
-      <td>94</td>
-      <td>1440.3092</td>
-      <td>1357.5148</td>
-      <td>A</td>
-      <td>L</td>
+      <th>16</th>
+      <td>Chrysler Imperial</td>
+      <td>14.7</td>
+      <td>8</td>
+      <td>440.0</td>
+      <td>230</td>
+      <td>3.23</td>
+      <td>5.345</td>
+      <td>17.42</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>4</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>201211030WAS</td>
-      <td>2013</td>
-      <td>Wizards</td>
-      <td>86</td>
-      <td>89</td>
-      <td>1435.2531</td>
-      <td>1571.9491</td>
-      <td>H</td>
-      <td>L</td>
+      <th>13</th>
+      <td>Merc 450SLC</td>
+      <td>15.2</td>
+      <td>8</td>
+      <td>275.8</td>
+      <td>180</td>
+      <td>3.07</td>
+      <td>3.780</td>
+      <td>18.00</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>3</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>201211070BOS</td>
-      <td>2013</td>
-      <td>Wizards</td>
-      <td>94</td>
-      <td>100</td>
-      <td>1432.6027</td>
-      <td>1574.5995</td>
-      <td>A</td>
-      <td>L</td>
+      <th>18</th>
+      <td>Honda Civic</td>
+      <td>30.4</td>
+      <td>4</td>
+      <td>75.7</td>
+      <td>52</td>
+      <td>4.93</td>
+      <td>1.615</td>
+      <td>18.52</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4</td>
+      <td>2</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>201211090WAS</td>
-      <td>2013</td>
-      <td>Wizards</td>
-      <td>91</td>
-      <td>101</td>
-      <td>1421.1359</td>
-      <td>1516.1222</td>
-      <td>H</td>
-      <td>L</td>
+      <th>22</th>
+      <td>AMC Javelin</td>
+      <td>15.2</td>
+      <td>8</td>
+      <td>304.0</td>
+      <td>150</td>
+      <td>3.15</td>
+      <td>3.435</td>
+      <td>17.30</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>2</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>201211100IND</td>
-      <td>2013</td>
-      <td>Wizards</td>
-      <td>85</td>
-      <td>89</td>
-      <td>1418.8296</td>
-      <td>1548.2810</td>
-      <td>A</td>
-      <td>L</td>
+      <th>8</th>
+      <td>Merc 230</td>
+      <td>22.8</td>
+      <td>4</td>
+      <td>140.8</td>
+      <td>95</td>
+      <td>3.92</td>
+      <td>3.150</td>
+      <td>22.90</td>
+      <td>1</td>
+      <td>0</td>
+      <td>4</td>
+      <td>2</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-</div>
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>printed only the first five observations...
-Number of rows in the dataset = 246
-</pre>
-</div>
 </div>
 
 </div>
@@ -12131,17 +11954,17 @@ Number of rows in the dataset = 246
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Step-3:-Hypothesis-Test-for-the-Population-Mean-(I)">Step 3: Hypothesis Test for the Population Mean (I)<a class="anchor-link" href="#Step-3:-Hypothesis-Test-for-the-Population-Mean-(I)">&#182;</a></h2><p>A relative skill level of 1340 represents a critically low skill level in the league. The management of your team has hypothesized that the average relative skill level of your team in the years 2013-2015 is greater than 1340. Test this claim using a 5% level of significance. For this test, assume that the population standard deviation for relative skill level is unknown. Make the following edits to the code block below:</p>
-<ol>
-<li><font color='red'> Replace <strong>??DATAFRAME_YOUR_TEAM??</strong> with the name of your team's dataframe. </font> See Step 2 for the name of your team's dataframe.</li>
-</ol>
-<ol>
-<li><font color='red'> Replace <strong>??RELATIVE_SKILL??</strong> with the name of the variable for relative skill.</font> See the table included in the Project Two instructions above to pick the variable name. Enclose this variable in single quotes. For example, if the variable name is <strong>var2</strong> then replace ??RELATIVE_SKILL?? with 'var2'.</li>
-</ol>
-<ol>
-<li><font color='red'> Replace <strong>??NULL_HYPOTHESIS_VALUE??</strong> with the mean value of the relative skill under the null hypothesis. </font></li>
-</ol>
-<p>After you are done with your edits, click the block of code below and hit the <strong>Run</strong> button above.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Step-2:-Scatterplot-of-miles-per-gallon-against-weight">Step 2: Scatterplot of miles per gallon against weight<a class="anchor-link" href="#Step-2:-Scatterplot-of-miles-per-gallon-against-weight">&#182;</a></h3><p>The block of code below will create a scatterplot of the variables "miles per gallon" (coded as mpg in the data set) and "weight" of the car (coded as wt).</p>
+<p>Click the block of code below and hit the <strong>Run</strong> button above.<br>
+NOTE: If the plot is not created, click the code section and hit the <strong>Run</strong> button again.</p>
 
 </div>
 </div>
@@ -12151,20 +11974,18 @@ Number of rows in the dataset = 246
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">st</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="c1"># Mean relative skill level of your team</span>
-<span class="n">mean_elo_your_team</span> <span class="o">=</span> <span class="n">your_team_df</span><span class="p">[</span><span class="s1">&#39;elo_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean Relative Skill of your team in the years 2013 to 2015 =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">mean_elo_your_team</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="c1"># create scatterplot of variables mpg against wt.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cars_df</span><span class="p">[</span><span class="s2">&quot;wt&quot;</span><span class="p">],</span> <span class="n">cars_df</span><span class="p">[</span><span class="s2">&quot;mpg&quot;</span><span class="p">],</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
 
+<span class="c1"># set a title for the plot, x-axis, and y-axis.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;MPG against Weight&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Weight (1000s lbs)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;MPG&#39;</span><span class="p">)</span>
 
-<span class="c1"># Hypothesis Test</span>
-<span class="c1"># ---- TODO: make your edits here ----</span>
-<span class="n">test_statistic</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">ttest_1samp</span><span class="p">(</span><span class="n">your_team_df</span><span class="p">[</span><span class="s1">&#39;elo_n&#39;</span><span class="p">],</span>  <span class="mi">1340</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hypothesis Test for the Population Mean&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test Statistic =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">test_statistic</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;P-value =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">p_value</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span> 
+<span class="c1"># show the plot.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -12180,13 +12001,14 @@ Number of rows in the dataset = 246
 <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Mean Relative Skill of your team in the years 2013 to 2015 = 1481.4
-Hypothesis Test for the Population Mean
-Test Statistic = 33.31
-P-value = 0.0
-</pre>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
 </div>
+
 </div>
 
 </div>
@@ -12205,19 +12027,9 @@ P-value = 0.0
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Step-4:-Hypothesis-Test-for-the-Population-Mean-(II)">Step 4: Hypothesis Test for the Population Mean (II)<a class="anchor-link" href="#Step-4:-Hypothesis-Test-for-the-Population-Mean-(II)">&#182;</a></h2><p>A team averaging 106 points is likely to do very well during the regular season. The coach of your team has hypothesized that your team scored at an average of less than 106 points in the years 2013-2015. Test this claim at a 1% level of significance. For this test, assume that the population standard deviation for relative skill level is unknown.</p>
-<p><font><strong>You are to write this code block yourself.</strong></font></p>
-<p>Use Step 3 to help you write this code block. Here is some information that will help you write this code block. Reach out to your instructor if you need help.</p>
-<ol>
-<li><font color='red'> The dataframe for your team is called your_team_df. </font></li>
-<li><font color='red'> The variable 'pts' represents the points scored by your team. </font></li>
-<li><font color='red'> Calculate and print the mean points scored by your team during the years you picked. </font></li>
-<li><font color='red'> Identify  the mean score under the null hypothesis. You only have to identify this value and do not have to print it. </font> (Hint: this is given in the problem statement)</li>
-<li><font color='red'> Assuming that the population standard deviation is unknown, use Python methods to carry out the hypothesis test. </font></li>
-<li><font color='red'> Calculate and print the test statistic rounded to two decimal places. </font></li>
-<li><font color='red'> Calculate and print the P-value rounded to four decimal places. </font></li>
-</ol>
-<p>Write your code in the code block section below. After you are done, click this block of code and hit the <strong>Run</strong> button above. Reach out to your instructor if you need more help with this step.</p>
+<h3 id="Step-3:-Scatterplot-of-miles-per-gallon-against-horsepower">Step 3: Scatterplot of miles per gallon against horsepower<a class="anchor-link" href="#Step-3:-Scatterplot-of-miles-per-gallon-against-horsepower">&#182;</a></h3><p>The block of code below will create a scatterplot of the variables "miles per gallon" (coded as mpg in the data set) and "horsepower" of the car (coded as hp).</p>
+<p>Click the block of code below and hit the <strong>Run</strong> button above.<br>
+NOTE: If the plot is not created, click the code section and hit the <strong>Run</strong> button again.</p>
 
 </div>
 </div>
@@ -12227,19 +12039,18 @@ P-value = 0.0
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Write your code in this code block section</span>
-<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">st</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="c1"># Mean relative skill level of your team</span>
-<span class="n">mean_pts_your_team</span> <span class="o">=</span> <span class="n">your_team_df</span><span class="p">[</span><span class="s1">&#39;pts&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean Points of your team in the years 2013 to 2015 =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">mean_pts_your_team</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="c1"># create scatterplot of variables mpg against hp.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cars_df</span><span class="p">[</span><span class="s2">&quot;hp&quot;</span><span class="p">],</span> <span class="n">cars_df</span><span class="p">[</span><span class="s2">&quot;mpg&quot;</span><span class="p">],</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
 
+<span class="c1"># set a title for the plot, x-axis, and y-axis.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;MPG against Horsepower&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Horsepower&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;MPG&#39;</span><span class="p">)</span>
 
-<span class="n">test_statistic</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">ttest_1samp</span><span class="p">(</span><span class="n">your_team_df</span><span class="p">[</span><span class="s1">&#39;pts&#39;</span><span class="p">],</span>  <span class="mi">106</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hypothesis Test for the Population Mean&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test Statistic =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">test_statistic</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;P-value =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">p_value</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span> 
+<span class="c1"># show the plot.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -12255,13 +12066,14 @@ P-value = 0.0
 <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Mean Points of your team in the years 2013 to 2015 = 97.47
-Hypothesis Test for the Population Mean
-Test Statistic = -11.35
-P-value = 0.0
-</pre>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
 </div>
+
 </div>
 
 </div>
@@ -12280,47 +12092,22 @@ P-value = 0.0
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Step-5:-Hypothesis-Test-for-the-Population-Proportion">Step 5: Hypothesis Test for the Population Proportion<a class="anchor-link" href="#Step-5:-Hypothesis-Test-for-the-Population-Proportion">&#182;</a></h2><p>Suppose the management claims that the proportion of games that your team wins when scoring 102 or more points is 0.90. Test this claim using a 5% level of significance. Make the following edits to the code block below:</p>
-<ol>
-<li><font color='red'> Replace <strong>??COUNT_VAR??</strong> with the variable name that represents the number of games won when your team scores over 102 points. </font> (Hint: this variable is in the code block below).</li>
-</ol>
-<ol>
-<li><font color='red'> Replace <strong>??NOBS_VAR??</strong> with the variable name that represents the total number of games when your team scores over 102 points. </font> (Hint: this variable is in the code block below).</li>
-</ol>
-<ol>
-<li><font color='red'> Replace <strong>??NULL_HYPOTHESIS_VALUE??</strong> with the proportion under the null hypothesis. </font></li>
-</ol>
-<p>After you are done with your edits, click the block of code below and hit the <strong>Run</strong> button above.</p>
+<h3 id="Step-4:-Correlation-matrix-for-miles-per-gallon,-weight-and-horsepower">Step 4: Correlation matrix for miles per gallon, weight and horsepower<a class="anchor-link" href="#Step-4:-Correlation-matrix-for-miles-per-gallon,-weight-and-horsepower">&#182;</a></h3><p>Now you will calculate the correlation coefficient between the variables "miles per gallon" and "weight". You will also calculate the correlation coefficient between the variables "miles per gallon" and "horsepower". The <strong>corr</strong> method of a dataframe returns the correlation matrix with the correlation coefficients between all variables in the dataframe. You will specify to only return the matrix for the three variables.</p>
+<p>Click the block of code below and hit the <strong>Run</strong> button above.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.stats.proportion</span> <span class="k">import</span> <span class="n">proportions_ztest</span>
-
-<span class="n">your_team_gt_102_df</span> <span class="o">=</span> <span class="n">your_team_df</span><span class="p">[(</span><span class="n">your_team_df</span><span class="p">[</span><span class="s1">&#39;pts&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">102</span><span class="p">)]</span>
-
-<span class="c1"># Number of games won when your team scores over 102 points</span>
-<span class="n">counts</span> <span class="o">=</span> <span class="p">(</span><span class="n">your_team_gt_102_df</span><span class="p">[</span><span class="s1">&#39;game_result&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;W&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-
-<span class="c1"># Total number of games when your team scores over 102 points</span>
-<span class="n">nobs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">your_team_gt_102_df</span><span class="p">[</span><span class="s1">&#39;game_result&#39;</span><span class="p">])</span>
-
-<span class="n">p</span> <span class="o">=</span> <span class="n">counts</span><span class="o">*</span><span class="mf">1.0</span><span class="o">/</span><span class="n">nobs</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Proportion of games won by your team when scoring more than 102 points in the years 2013 to 2015 =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-
-
-<span class="c1"># Hypothesis Test</span>
-<span class="c1"># ---- TODO: make your edits here ----</span>
-<span class="n">test_statistic</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="n">proportions_ztest</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">nobs</span><span class="p">,</span> <span class="o">.</span><span class="mi">9</span><span class="p">,</span> <span class="n">prop_var</span><span class="o">=</span><span class="n">p</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hypothesis Test for the Population Proportion&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test Statistic =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">test_statistic</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;P-value =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">p_value</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create correlation matrix for mpg, wt, and hp. </span>
+<span class="c1"># The correlation coefficient between mpg and wt is contained in the cell for mpg row and wt column (or wt row and mpg column).</span>
+<span class="c1"># The correlation coefficient between mpg and hp is contained in the cell for mpg row and hp column (or hp row and mpg column).</span>
+<span class="n">mpg_wt_corr</span> <span class="o">=</span> <span class="n">cars_df</span><span class="p">[[</span><span class="s1">&#39;mpg&#39;</span><span class="p">,</span><span class="s1">&#39;wt&#39;</span><span class="p">,</span><span class="s1">&#39;hp&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mpg_wt_corr</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12337,10 +12124,10 @@ P-value = 0.0
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Proportion of games won by your team when scoring more than 102 points in the years 2013 to 2015 = 0.7722
-Hypothesis Test for the Population Proportion
-Test Statistic = -2.71
-P-value = 0.0067
+<pre>          mpg        wt        hp
+mpg  1.000000 -0.873366 -0.784926
+wt  -0.873366  1.000000  0.652985
+hp  -0.784926  0.652985  1.000000
 </pre>
 </div>
 </div>
@@ -12353,17 +12140,16 @@ P-value = 0.0067
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Step-6:-Hypothesis-Test-for-the-Difference-Between-Two-Population-Means">Step 6: Hypothesis Test for the Difference Between Two Population Means<a class="anchor-link" href="#Step-6:-Hypothesis-Test-for-the-Difference-Between-Two-Population-Means">&#182;</a></h2><p>The management of your team wants to compare the team with the assigned team (the Bulls in 1996-1998). They claim that the skill level of your team in 2013-2015 is the same as the skill level of the Bulls in 1996 to 1998. In other words, the mean relative skill level of your team in 2013 to 2015 is the same as the mean relative skill level of the Bulls in 1996-1998. Test this claim using a 1% level of significance. Assume that the population standard deviation is unknown. Make the following edits to the code block below:</p>
-<ol>
-<li><font color='red'> Replace <strong>??DATAFRAME_ASSIGNED_TEAM??</strong> with the name of assigned team's dataframe. </font> See Step 1 for the name of assigned team's dataframe.</li>
-</ol>
-<ol>
-<li><font color='red'> Replace <strong>??DATAFRAME_YOUR_TEAM??</strong> with the name of your team's dataframe. </font> See Step 2 for the name of your team's dataframe.</li>
-</ol>
-<ol>
-<li><font color='red'> Replace <strong>??RELATIVE_SKILL??</strong> with the name of the variable for relative skill.</font> See the table included in Project Two instructions above to pick the variable name. Enclose this variable in single quotes. For example, if the variable name is <strong>var2</strong> then replace ??RELATIVE_SKILL?? with 'var2'.</li>
-</ol>
-<p>After you are done with your edits, click the block of code below and hit the <strong>Run</strong> button above.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Step-5:-Multiple-regression-model-to-predict-miles-per-gallon-using-weight-and-horsepower">Step 5: Multiple regression model to predict miles per gallon using weight and horsepower<a class="anchor-link" href="#Step-5:-Multiple-regression-model-to-predict-miles-per-gallon-using-weight-and-horsepower">&#182;</a></h3><p>This block of code produces a multiple regression model with "miles per gallon" as the response variable, and "weight" and "horsepower" as predictor variables. The <strong>ols</strong> method in statsmodels.formula.api submodule returns all statistics for this multiple regression model.</p>
+<p>Click the block of code below and hit the <strong>Run</strong> button above.</p>
 
 </div>
 </div>
@@ -12373,22 +12159,11 @@ P-value = 0.0067
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">st</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.formula.api</span> <span class="k">import</span> <span class="n">ols</span>
 
-<span class="n">mean_elo_n_project_team</span> <span class="o">=</span> <span class="n">assigned_team_df</span><span class="p">[</span><span class="s1">&#39;elo_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean Relative Skill of the assigned team in the years 1996 to 1998 =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">mean_elo_n_project_team</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-
-<span class="n">mean_elo_n_your_team</span> <span class="o">=</span> <span class="n">your_team_df</span><span class="p">[</span><span class="s1">&#39;elo_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean Relative Skill of your team in the years 2013 to 2015  =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">mean_elo_n_your_team</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-
-
-<span class="c1"># Hypothesis Test</span>
-<span class="c1"># ---- TODO: make your edits here ----</span>
-<span class="n">test_statistic</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">assigned_team_df</span><span class="p">[</span><span class="s2">&quot;elo_n&quot;</span><span class="p">],</span> <span class="n">your_team_df</span><span class="p">[</span><span class="s2">&quot;elo_n&quot;</span><span class="p">])</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hypothesis Test for the Difference Between Two Population Means&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test Statistic =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">test_statistic</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;P-value =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">p_value</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="c1"># create the multiple regression model with mpg as the response variable; weight and horsepower as predictor variables.</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;mpg ~ wt+hp&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">cars_df</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
 </pre></div>
 
 </div>
@@ -12405,11 +12180,32 @@ P-value = 0.0067
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Mean Relative Skill of the assigned team in the years 1996 to 1998 = 1739.8
-Mean Relative Skill of your team in the years 2013 to 2015  = 1481.4
-Hypothesis Test for the Difference Between Two Population Means
-Test Statistic = 48.15
-P-value = 0.0
+<pre>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                    mpg   R-squared:                       0.843
+Model:                            OLS   Adj. R-squared:                  0.831
+Method:                 Least Squares   F-statistic:                     72.53
+Date:                Wed, 04 Dec 2024   Prob (F-statistic):           1.39e-11
+Time:                        05:54:28   Log-Likelihood:                -68.852
+No. Observations:                  30   AIC:                             143.7
+Df Residuals:                      27   BIC:                             147.9
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     37.5981      1.588     23.679      0.000      34.340      40.856
+wt            -3.8778      0.621     -6.249      0.000      -5.151      -2.605
+hp            -0.0328      0.009     -3.717      0.001      -0.051      -0.015
+==============================================================================
+Omnibus:                        5.174   Durbin-Watson:                   1.741
+Prob(Omnibus):                  0.075   Jarque-Bera (JB):                3.838
+Skew:                           0.859   Prob(JB):                        0.147
+Kurtosis:                       3.345   Cond. No.                         586.
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 </pre>
 </div>
 </div>
@@ -12430,7 +12226,24 @@ P-value = 0.0
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="End-of-Project-Two">End of Project Two<a class="anchor-link" href="#End-of-Project-Two">&#182;</a></h2><p>Download the HTML output and submit it with your summary report for Project Two. The HTML output can be downloaded by clicking <strong>File</strong>, then <strong>Download as</strong>, then <strong>HTML</strong>. Do not include the Python code within your summary report.</p>
+<h2 id="End-of-initial-post">End of initial post<a class="anchor-link" href="#End-of-initial-post">&#182;</a></h2><p>Attach the HTML output to your initial post in the Module Six discussion. The HTML output can be downloaded by clicking <strong>File</strong>, then <strong>Download as</strong>, then <strong>HTML</strong>. Be sure to answer all questions about this activity in the Module Six discussion.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Follow-up-posts-(due-Sunday)">Follow-up posts (due Sunday)<a class="anchor-link" href="#Follow-up-posts-(due-Sunday)">&#182;</a></h2><p>Return to the Module Six discussion to answer the follow-up questions in your response posts to other students. There are no Python scripts to run for your follow-up posts.</p>
 
 </div>
 </div>
